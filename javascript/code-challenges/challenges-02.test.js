@@ -222,6 +222,9 @@ const snorlaxStats = {
 
 const extractStats = (arr) => {
   // Solution code here...
+  let newArr = arr.map(element => ({name: element.stat.name, total: (element.effort + element.baseStat)}));
+
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -315,7 +318,7 @@ xdescribe('Testing challenge 8', () => {
   });
 });
 
-describe('Testing challenge 9', () => {
+xdescribe('Testing challenge 9', () => {
   test('It should return an array containing only the ability names', () => {
     expect(extractAbilities(snorlaxAbilities.abilities)).toStrictEqual(['gluttony', 'cute charm', 'immunity']);
     expect(extractAbilities(snorlaxAbilities.abilities).length).toStrictEqual(3);
