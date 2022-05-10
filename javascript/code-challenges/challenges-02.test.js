@@ -23,6 +23,9 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 
 const addOne = (arr) => {
   // Solution code here...
+  let newArr = arr.map(element => element + 1);
+
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -33,6 +36,9 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 
 const addQuestion = (arr) => {
   // Solution code here...
+  let newArr = arr.map(element => element + '?');
+
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
