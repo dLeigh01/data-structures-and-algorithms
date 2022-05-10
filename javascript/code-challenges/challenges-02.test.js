@@ -98,6 +98,9 @@ For example: charCode(['h','i']) returns [104, 105].
 
 const charCode = (arr) => {
   // Solution code here...
+  let newArr = arr.map(element => element.charCodeAt());
+
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -112,6 +115,17 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 
 const evenOdd = (arr) => {
   // Solution code here...
+  let newArr = arr.map(element => {
+    if (isNaN(element)) {
+      return 'N/A';
+    } else if (element % 2) {
+      return 'odd';
+    } else {
+      return 'even';
+    }
+  });
+
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
