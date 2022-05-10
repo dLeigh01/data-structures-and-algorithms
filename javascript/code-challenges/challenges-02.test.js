@@ -66,6 +66,10 @@ Write a function named forEachTwoToThe that produces the same output as your for
 
 const forEachTwoToThe = (arr) => {
   // Solution code here...
+  let newArr = [];
+  arr.forEach(element => newArr.push(Math.pow(2, element)));
+
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
