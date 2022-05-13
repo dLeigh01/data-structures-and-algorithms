@@ -140,6 +140,12 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
+  let string = [...str];
+  let reverse = [];
+  string.forEach(char => reverse.unshift(char));
+  let string2 = reverse.reduce((total, char) => total + char);
+
+  return string2;
 };
 
 /* ------------------------------------------------------------------------------------------------
