@@ -122,6 +122,10 @@ const characters = [
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
+  arr.forEach(obj => houses.push(Object.entries(obj)));
+  let newArr = [];
+  houses.forEach(entry => newArr.push(...entry.filter(item => item.includes('house'))));
+  houses = newArr.map(house => house[1]);
   return houses;
 };
 
