@@ -28,6 +28,10 @@ return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
   // Solution code here...
+  // arr.reduce((max, num) => max > num ? max : num);
+  let max = [];
+  matrix.forEach(arr => max.push((arr.reduce((max, num) => max > num ? max : num))));
+  return max.reduce((max,num) => max > num ? max : num);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,6 +50,14 @@ return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
   // Solution code here...
+  let total = 0;
+  for (let arr of matrix) {
+    for (let num of arr) {
+      total += num;
+    }
+  }
+
+  return total;
 };
 
 
