@@ -28,7 +28,6 @@ return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
   // Solution code here...
-  // arr.reduce((max, num) => max > num ? max : num);
   let max = [];
   matrix.forEach(arr => max.push((arr.reduce((max, num) => max > num ? max : num))));
   return max.reduce((max,num) => max > num ? max : num);
@@ -51,12 +50,12 @@ return: 35
 const totalSum = (matrix) => {
   // Solution code here...
   let total = 0;
+
   for (let arr of matrix) {
     for (let num of arr) {
       total += num;
     }
   }
-
   return total;
 };
 
@@ -85,7 +84,16 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
+  let hourly = [];
 
+  for (let i = 0; i < hoursOpen.length; i++) {
+    let total = 0;
+    for (let j = 0; j < stores.length; j++) {
+      total = total + stores[j][i];
+    }
+    hourly.push(total);
+  }
+  return hourly;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -100,6 +108,21 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
+  let hourly = [];
+  // class Hour {
+  //   constructor(sales, time){
+  //     this.sales = `${sales} cookies`;
+  //     this.time = time;
+  //   }
+  // }
+  data.forEach(hour => hourly.push({
+    sales: `${hour} cookies`,
+  }));
+  for (let i = 0; i < hourly.length; i++) {
+    hourly[i].time = hours[i];
+  }
+
+  return hourly;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -125,6 +148,28 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
+  // let children = 0;
+  // arr.forEach(person => {
+  //   if (person.name === character) {
+  //     Object.keys(person).forEach((key, idx) => {
+  //       if (key === 'children') {
+  //         children = Object.values(person)[idx].length;
+  //       }
+  //     });
+  //   }
+  // });
+  // return children ? true : false;
+  let treats = 0;
+  arr.forEach(errand => {
+    if (errand.store === 'Pet store') {
+      errand.items.forEach(obj => {
+        if (obj.name === 'Treats') {
+          treats = obj.quantity;
+        }
+      });
+    }
+  });
+  return treats;
 };
 
 /* ------------------------------------------------------------------------------------------------
