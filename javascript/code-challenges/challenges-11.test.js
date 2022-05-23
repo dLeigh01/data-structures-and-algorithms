@@ -27,7 +27,7 @@ function transformToLis(obj){
     arr.push(`<li>${keysArr[i]}: ${valuesArr[i]}</li>`);
   }
   return arr;
-};
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -41,6 +41,9 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   // Solution code here...
+  let total = 0;
+  input.forEach(arr => arr.filter(num => num === target).forEach(() => total += 1));
+  return total;
 };
 
 /* ------------------------------------------------------------------------------------------------
