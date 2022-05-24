@@ -50,6 +50,8 @@ If it does, return true. If not, return false.
 
 const hasNumber = (string) => {
   // Solution code here...
+  let regex = /[a-zA-Z]{1,}\d{1,}/;
+  return regex.test(string);
 };
 
 /* ------------------------------------------------------------------------------------------------
