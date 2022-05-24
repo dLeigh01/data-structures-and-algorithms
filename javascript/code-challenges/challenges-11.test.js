@@ -149,6 +149,13 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
+  let res = [];
+  data.forEach(obj => {
+    if (Object.values(obj).includes('male') || Object.values(obj).includes('female')) {
+      res.push(obj.name);
+    }
+  });
+  return res.reduce((a,b) => a + ' and ' + b);
 };
 
 /* ------------------------------------------------------------------------------------------------
