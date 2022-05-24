@@ -72,6 +72,8 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 
 const validateEmail = (email) => {
   // Solution code here...
+  let regex = /^(?:[a-zA-Z|\d]*[.][a-zA-Z|\d]*\S|[a-zA-Z|\d]*\w+)@[a-zA-Z]*.(?:com|org|net)$/;
+  return regex.test(email);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -97,6 +99,8 @@ Return either true or false.
 
 const validatePhoneNumber = (phoneNumber) => {
   // Solution code here...
+  let regex = /^(((\(\d\d\d\))|\d\d\d)(\s|-|)\d\d\d(\s|-|)\d\d\d\d)$/;
+  return regex.test(phoneNumber);
 };
 
 /* ------------------------------------------------------------------------------------------------
