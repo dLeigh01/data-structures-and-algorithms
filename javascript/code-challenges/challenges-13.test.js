@@ -72,6 +72,7 @@ For example, 'abcdefg' returns 'bdf'
 
 const onlyOddChars = (str) => {
   // Solution code here...
+  return str.split('').filter((char, idx) => idx%2).join('');
 };
 
 /* ------------------------------------------------------------------------------------------------
