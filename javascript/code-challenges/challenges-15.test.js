@@ -26,6 +26,7 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 
 const toTitleCase = (arr) => {
   // Solution code here...
+  return arr.map(str => str.split('').map((char, idx) => idx === 0 ? char.toUpperCase() : char).join(''));
 };
 
 /* ------------------------------------------------------------------------------------------------
