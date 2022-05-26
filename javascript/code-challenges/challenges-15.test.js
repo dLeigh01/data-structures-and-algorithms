@@ -174,6 +174,38 @@ Here is a sample board:
 
 const detectTicTacToeWin = (board) => {
   // Solution code here...
+  let boardSpace = [];
+  function helpCheck (a1, a2, a3, b1, b2, b3, c1, c2, c3) {
+    if (a1 !== '' && a1 === a2 && a2 === a3 ) {
+      return true;
+    } else if (b1 !== '' && b1 === b2 && b2 === b3 ) {
+      return true;
+    } else if (c1 !== '' && c1 === c2 && c2 === c3 ) {
+      return true;
+    } else if (a1 !== '' && a1 === b1 && b1 === c1 ) {
+      return true;
+    } else if (a2 !== '' && a2 === b2 && b2 === c2 ) {
+      return true;
+    } else if (a3 !== '' && a3 === b3 && b3 === c3 ) {
+      return true;
+    } else if (a1 !== '' && a1 === b2 && b2 === c3 ) {
+      return true;
+    } else if (a3 !== '' && a3 === b2 && b2 === c1 ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  // i = col j = row
+
+  for (let i in board) {
+    for (let j in board[i]) {
+      boardSpace.push(board[i][j]);
+    }
+  }
+
+  return helpCheck(...boardSpace);
 };
 
 /* ------------------------------------------------------------------------------------------------
