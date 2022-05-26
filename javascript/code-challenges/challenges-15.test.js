@@ -14,7 +14,7 @@ const screenForNames = (arr) => {
   // Solution code here...
   let regex = /^((Mr. \w+)|(Dr. \w+)|(Ms. \w+)|(Mrs. \w+))/;
   return arr.filter(str => regex.test(str));
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -149,6 +149,8 @@ https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
   // Solution code here...
+  let regex = /^(?:https:\/\/)/;
+  return regex.test(url);
 };
 
 /* ------------------------------------------------------------------------------------------------
