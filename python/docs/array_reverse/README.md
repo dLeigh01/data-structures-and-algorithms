@@ -4,7 +4,7 @@
 
 ## Whiteboard Process
 
-![whiteboard](./challenge_array-reverse_whiteboard.jpg)
+![whiteboard](./array-reverse.jpg)
 
 ## Approach and Efficiency
 
