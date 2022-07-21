@@ -7,3 +7,5 @@
 ![whiteboard](./array-binary-search.jpg)
 
 ## Approach and Efficiency
+
+Honestly I had a couple of different approachs on this and this is likely not the most efficient way, but I did want to practice recursion and this is the best way I could find to go about that. In terms of efficiency, its a recursive function, leaving it in O(N^2).
