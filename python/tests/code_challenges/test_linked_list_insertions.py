@@ -86,3 +86,25 @@ def test_insert_after_missing():
 
     with pytest.raises(TargetError):
         linked_list.insert_after("radish", "zucchinni")
+
+def test_delete_node_head():
+    linked_list = LinkedList()
+
+    linked_list.insert("apple")
+
+    linked_list.insert("banana")
+
+    linked_list.delete_node("apple")
+
+    assert str(linked_list) == "{ banana } -> NULL"
+
+def test_delete_node():
+    linked_list = LinkedList()
+
+    linked_list.insert("apple")
+
+    linked_list.insert("banana")
+
+    linked_list.delete_node("banana")
+
+    assert str(linked_list) == "{ apple } -> NULL"

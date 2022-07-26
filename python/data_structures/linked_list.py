@@ -65,6 +65,22 @@ class LinkedList:
 
         raise TargetError
 
+    def delete_node(self, target):
+        previous = None
+        current = self.head
+
+        while current:
+            if current.value == target:
+                if previous:
+                    previous.next = current.next
+                else:
+                    self.head = current.next
+                return
+            previous = current
+            current = current.next
+
+        raise TargetError
+
 class Node:
     def __init__(self, value, next=None):
         self.value = value
