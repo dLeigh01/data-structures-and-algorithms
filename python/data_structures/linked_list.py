@@ -81,6 +81,23 @@ class LinkedList:
 
         raise TargetError
 
+    def kth_from_end(self, target):
+        current = self.head
+        search = []
+
+        if current is None or target < 0:
+            raise TargetError
+
+        while current:
+            search.append(current.value)
+            current = current.next
+
+        index = len(search) - 1
+        if target > index:
+            raise TargetError
+
+        return search[index - target]
+
 class Node:
     def __init__(self, value, next=None):
         self.value = value
