@@ -28,3 +28,4 @@ To run your tests
 - [linked_lists](python/docs/linked_list/README.md)
 - [linked_list_insertions](python/docs/linked_list_insertions/README.md)
 - [linked_list_kth](python/docs/linked_list_kth/README.md)
+- [linked_list_zip](python/docs/linked_list_zip/README.md)
