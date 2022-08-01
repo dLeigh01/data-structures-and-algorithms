@@ -46,3 +46,13 @@ def test_enqueue_dequeue_enqueue_dequeue():
     expected = ["bananas", "cucumbers", "dates"]
 
     assert actual == expected
+
+def test_peek():
+    pq = PseudoQueue()
+    pq.enqueue("apples")
+    pq.enqueue("bananas")
+
+    actual = pq.peek()
+    expected = "apples"
+
+    assert actual == expected

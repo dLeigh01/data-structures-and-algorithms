@@ -26,7 +26,15 @@ class PseudoQueue:
         return value
 
     def peek(self):
-        pass
+        if self.stack1.is_empty():
+            raise InvalidOperationError("Method not allowed on empty collection")
+        while self.stack1.is_empty() is False:
+            self.stack2.push(self.stack1.pop())
+        value = self.stack2.top.value
+        while self.stack2.is_empty() is False:
+            self.stack1.push(self.stack2.pop())
+        return value
 
     def is_empty(self):
-        pass
+        if self.stack1.is_empty():
+            raise InvalidOperationError("Method not allowed on empty collection")
