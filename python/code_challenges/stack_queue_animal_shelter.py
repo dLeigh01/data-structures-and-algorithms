@@ -13,13 +13,16 @@ class AnimalShelter:
     def enqueue(self, value):
         self.animals.push(value)
 
-    def dequeue(self, pref):
+    def dequeue(self, pref=None):
         target = None
         while self.animals.top:
             current_critter = self.animals.pop()
             if current_critter.type == pref:
                 target = current_critter
             self.sorting.enqueue(current_critter)
+
+        if pref is None:
+            target = self.sorting.rear.value
 
         while self.sorting.front:
             current_critter = self.sorting.dequeue()

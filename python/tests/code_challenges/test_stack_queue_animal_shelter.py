@@ -59,6 +59,19 @@ def test_bad_pref():
     expected = None
     assert expected == actual
 
+
+def test_bad_pref_return_longest():
+    shelter = AnimalShelter()
+    cat = Cat()
+    dog = Dog()
+    shelter.enqueue(dog)
+    shelter.enqueue(cat)
+    shelter.dequeue("dog")
+    actual = shelter.dequeue()
+    expected = cat
+    assert expected == actual
+
+
 def test_enqueue():
     shelter = AnimalShelter()
     cat = Cat()
