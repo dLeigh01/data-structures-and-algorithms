@@ -3,6 +3,9 @@ from data_structures.stack import Stack
 
 
 class AnimalShelter:
+    """
+    Takes in Dogs and Cats, then returns either FIFO based on the passed in species for dequeue
+    """
     def __init__(self):
         self.animals = Stack()
         self.sorting = Queue()
