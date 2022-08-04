@@ -32,3 +32,4 @@ To run your tests
 - [stack_and_queue](python/docs/stack_and_queue/README.md)
 - [stack_queue_pseudo](python/docs/stack_queue_pseudo/README.md)
 - [stack_queue_animal_shelter](python/docs/stack_queue_animal_shelter/README.md)
+- [stack_queue_brackets](python/docs/stack_queue_brackets/README.md)
