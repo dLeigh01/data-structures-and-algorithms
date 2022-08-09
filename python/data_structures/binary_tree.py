@@ -1,6 +1,6 @@
 class BinaryTree:
     """
-    Put docstring here
+    Instantiates a Binary Tree object that can search in pre order, in order, or post order
     """
 
     def __init__(self):
