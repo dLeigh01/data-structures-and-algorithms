@@ -29,7 +29,6 @@ class BinarySearchTree(BinaryTree):
 
     def contains(self, value):
         def _contains(value, node):
-            print("hello")
             if value == node.value:
                 return True
             if value < node.value:
@@ -40,5 +39,6 @@ class BinarySearchTree(BinaryTree):
                 if node.right:
                     return _contains(value, node.right)
                 return False
+            return False
 
         return _contains(value, self.root)
