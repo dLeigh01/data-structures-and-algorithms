@@ -5,7 +5,7 @@ encountered through breadth first traversal.
 
 ## Whiteboard Process
 
-[whiteboard](./tree-breadth-first.jpg)
+![whiteboard](./tree-breadth-first.jpg)
 
 ## Approach & Efficiency
 
