@@ -35,3 +35,5 @@ To run your tests
 - [stack_queue_brackets](python/docs/stack_queue_brackets/README.md)
 - [binary_trees](python/docs/trees/README.md)
 - [tree_breadth_first](python/docs/tree_breadth_first/README.md)
+- [tree_max](python/docs/tree_max/README.md)
+- [tree_fizz_buzz](python/docs/tree_fizz_buzz/README.md)
