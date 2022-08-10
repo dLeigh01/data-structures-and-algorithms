@@ -24,6 +24,8 @@ class Queue:
             raise InvalidOperationError("Method not allowed on empty collection")
         target = self.front
         self.front = self.front.next
+        if self.front is None:
+            self.rear = None
         return target.value
 
     def peek(self):
