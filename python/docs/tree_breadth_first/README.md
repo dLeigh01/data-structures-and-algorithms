@@ -9,7 +9,10 @@ encountered through breadth first traversal.
 
 ## Approach & Efficiency
 
-
+For this challenge, I took the approach of sending each node through a queue as I hit it to ensure I got each level done
+in order all the way across while also keeping the next level of nodes in line. The efficiency in time on this is O(N)
+because there are more steps with each extra node on the tree, and space is also O(N) because we are only creating more
+data in adding values to the list and nowhere else.
 
 ## Solution
 
