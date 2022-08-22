@@ -37,3 +37,4 @@ To run your tests
 - [tree_breadth_first](python/docs/tree_breadth_first/README.md)
 - [tree_max](python/docs/tree_max/README.md)
 - [tree_fizz_buzz](python/docs/tree_fizz_buzz/README.md)
+- [insertion_sorting](sorting/insertion/README.md)
