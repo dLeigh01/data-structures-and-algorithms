@@ -1,4 +1,6 @@
 def merge_sort(nums):
+  """Sorts a list recursively in order from low to high through merge sorting
+  """
 	length = len(nums)
 
 	if length > 1:
