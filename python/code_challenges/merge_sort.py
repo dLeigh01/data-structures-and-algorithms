@@ -11,6 +11,7 @@ def merge_sort(nums):
 		merge_sort(left)
 		merge_sort(right)
 		return merge(left, right, nums)
+
 	return nums
 
 
@@ -26,6 +27,7 @@ def merge(left, right, nums):
 		else:
 			nums[nums_index] = right[right_index]
 			right_index += 1
+
 		nums_index += 1
 
 	if left_index == len(left):
