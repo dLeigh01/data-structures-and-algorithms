@@ -39,3 +39,4 @@ To run your tests
 - [tree_fizz_buzz](python/docs/tree_fizz_buzz/README.md)
 - [insertion_sorting](sorting/insertion/README.md)
 - [merge_sorting](sorting/merge/README.md)
+- [quick_sorting](sorting/quick/README.md)
