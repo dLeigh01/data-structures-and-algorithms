@@ -61,6 +61,7 @@ def test_handle_collision():
 
 def test_get_from_collision():
     table = Hashtable()
+    table.set('different', 'pair')
     table.set('pair', 'one')
     table.set('pair', 'two')
     actual = table.get('pair')

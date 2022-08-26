@@ -28,8 +28,9 @@ class Hashtable:
             if bucket:
                 current = bucket.head
                 while current:
-                    if key == current.value[0]:
-                        values.append(current.value[1])
+                    if key != current.value[0]:
+                        break
+                    values.append(current.value[1])
                     current = current.next
 
         if len(values) >= 1:
@@ -45,8 +46,7 @@ class Hashtable:
 
         current = bucket.head
         while current:
-            key_value_pair = current.value
-            if key_value_pair[0] == key:
+            if current.value[0] == key:
                 return True
             current = current.next
 
