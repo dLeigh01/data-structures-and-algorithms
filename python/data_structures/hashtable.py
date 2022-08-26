@@ -24,14 +24,16 @@ class Hashtable:
 
     def get(self, key):
         values = []
-        for bucket in self.buckets:
-            if bucket:
-                current = bucket.head
-                while current:
-                    if key != current.value[0]:
-                        break
-                    values.append(current.value[1])
-                    current = current.next
+        index = self.hash(key)
+        bucket = self.buckets[index]
+        if not bucket:
+            return None
+        current = bucket.head
+        while current:
+            if key != current.value[0]:
+                break
+            values.append(current.value[1])
+            current = current.next
 
         if len(values) >= 1:
             return tuple(values)
