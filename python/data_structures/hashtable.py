@@ -29,13 +29,15 @@ class Hashtable:
         if not bucket:
             return None
         current = bucket.head
+
         while current:
-            if key != current.value[0]:
-                break
-            values.append(current.value[1])
+            if key == current.value[0]:
+                values.append(current.value[1])
             current = current.next
 
-        if len(values) >= 1:
+        if len(values) == 1:
+            return values[0]
+        if len(values) > 1:
             return tuple(values)
         return None
 

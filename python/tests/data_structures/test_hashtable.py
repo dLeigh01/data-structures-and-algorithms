@@ -41,7 +41,7 @@ def test_get_by_key():
     table = Hashtable()
     table.set('pair', 'one')
     actual = table.get('pair')
-    expected = ('one',)
+    expected = 'one'
     assert actual == expected
 
 
@@ -67,6 +67,15 @@ def test_get_from_collision():
     actual = table.get('pair')
     expected = ('one', 'two')
     assert sorted(actual) == sorted(expected)
+
+
+def test_get_from_collision_different():
+    table = Hashtable()
+    table.set('pal', 'friend')
+    table.set('lap', 'legs')
+    assert table.get('pal') == 'friend'
+    assert table.get('lap') == 'legs'
+
 
 def test_hash_in_range():
     table = Hashtable(size=2)
