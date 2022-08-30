@@ -5,16 +5,16 @@ from data_structures.queue import Queue
 
 def tree_intersection(tree1, tree2):
     checker = Hashtable()
+    queue = Queue()
     values = []
 
-    breadth_hash_search(tree1, checker)
-    check_hash_contains(tree2, checker, values)
+    breadth_hash_search(tree1, checker, queue)
+    check_hash_contains(tree2, checker, values, queue)
 
     return set(values)
 
 
-def check_hash_contains(tree, checker, values):
-    queue = Queue()
+def check_hash_contains(tree, checker, values, queue):
     if tree.root is not None:
         queue.enqueue(tree.root)
 
@@ -28,8 +28,7 @@ def check_hash_contains(tree, checker, values):
             queue.enqueue(node.right)
 
 
-def breadth_hash_search(tree, checker):
-    queue = Queue()
+def breadth_hash_search(tree, checker, queue):
     if tree.root is not None:
         queue.enqueue(tree.root)
 
