@@ -1,3 +1,5 @@
+from data_structures.queue import Queue
+
 class Graph:
     """
     Creates a graph that can add vertexes and edges, return a list of vertexes, return a list of vertexes connected to a given vertex, and return the total number of vertexes within it.
@@ -19,7 +21,7 @@ class Graph:
 
 
     def get_nodes(self):
-        return self.adjacency_list.keys()
+        return list(self.adjacency_list.keys())
 
 
     def add_edge(self, vertex1, vertex2, weight=0):
@@ -30,7 +32,28 @@ class Graph:
 
 
     def get_neighbors(self, vertex):
-            return self.adjacency_list[vertex]
+        return self.adjacency_list[vertex]
+
+
+    def breadth_first(self, root):
+        nodes = []
+        breadth = Queue()
+        visited = set()
+
+        breadth.enqueue(root)
+        visited.add(root)
+
+        while breadth.is_empty() is False:
+            current = breadth.dequeue()
+            nodes.append(current.value)
+
+            for neighbor in self.get_neighbors(current):
+                if neighbor.vertex not in visited:
+                    visited.add(neighbor.vertex)
+                    breadth.enqueue(neighbor.vertex)
+
+        return nodes
+
 
 
 class Vertex:
