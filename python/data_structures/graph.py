@@ -35,7 +35,7 @@ class Graph:
         return self.adjacency_list[vertex]
 
 
-    def breadth_first_search(self, root):
+    def breadth_first(self, root):
         nodes = []
         breadth = Queue()
         visited = set()
