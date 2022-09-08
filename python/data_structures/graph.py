@@ -55,6 +55,26 @@ class Graph:
         return nodes
 
 
+    def depth_first_search(self, root):
+        nodes = []
+        if root not in self.get_nodes():
+            return []
+
+        def _search(node):
+            nodes.append(node)
+            edges = self.get_neighbors(node)
+            for edge in edges:
+                if edge.vertex in nodes:
+                    continue
+                _search(edge.vertex)
+
+        _search(root)
+        for i, node in enumerate(nodes):
+            nodes[i] = node.value
+
+        return nodes
+
+
 
 class Vertex:
     def __init__(self, value):
